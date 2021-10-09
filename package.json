@@ -1,0 +1,26 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "description": "eslint base config for teknologi-umum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teknologi-umum/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "teknologi-umum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teknologi-umum/eslint-config/issues"
+  },
+  "homepage": "https://github.com/teknologi-umum/eslint-config#readme",
+  "peerDependencies": {
+    "eslint": ">= 7"
+  }
+}
