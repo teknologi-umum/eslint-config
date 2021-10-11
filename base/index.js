@@ -1,5 +1,4 @@
 module.exports = {
-  // we want all `eslint:recommended` good stuff as well
   extends: [
     "eslint:recommended",
     "plugin:jsonc/base",
