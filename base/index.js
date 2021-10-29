@@ -8,14 +8,14 @@ module.exports = {
   ],
 
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: "latest",
     ecmaFeatures: {
       jsx: true,
     },
     sourceType: "module",
   },
 
-  plugins: ["import", "node", "promise", "regexp"],
+  plugins: ["import", "node", "promise", "regexp", "editorconfig"],
 
   globals: {
     // don't mutate global variables
@@ -26,7 +26,7 @@ module.exports = {
 
   rules: {
     // don't await inside a loop, use Promise.all or similar
-    "no-await-in-loop": ["error"],
+    "no-await-in-loop": ["warn"],
 
     // so you don't forget to remove your leftover from improper debugging
     "no-console": ["warn"],
@@ -62,16 +62,7 @@ module.exports = {
     "no-use-before-define": ["error"],
 
     // trailing comma only allowed for multiline
-    "comma-dangle": [
-      "error",
-      {
-        arrays: "always-multiline",
-        objects: "always-multiline",
-        imports: "always-multiline",
-        exports: "always-multiline",
-        functions: "always-multiline",
-      },
-    ],
+    "comma-dangle": ["error", "never"],
 
     // only allows space after comma
     // ex: [1, 2, 3, 4]   valid
@@ -94,7 +85,7 @@ module.exports = {
     "prefer-rest-params": ["error", "always"],
 
     // use `let` or `const` properly
-    "prefer-const": ["error"],
+    "prefer-const": ["warn"],
 
     // use spread operator instead of .apply()
     "prefer-spread": ["warn"],
@@ -109,65 +100,46 @@ module.exports = {
     // requires return statements to either always or never specify values.
     "consistent-return": ["error"],
 
-    // warns against using the arrow function syntax in places where it
-    // could be confused with a comparison operator.
-    "no-confusing-arrow": ["error"],
-
     // Shadowing is the process by which a local variable shares the same name
     // as a variable in its containing scope
     "no-shadow": ["warn"],
 
     // useless stuffs
-    "no-useless-return": ["error"],
-    "no-useless-concat": ["error"],
-    "no-useless-constructor": ["error"],
-    "no-useless-rename": ["error"],
-    "no-useless-computed-key": ["error"],
-    "no-useless-catch": ["error"],
-    "no-useless-call": ["error"],
+    "no-useless-return": ["warn"],
+    "no-useless-concat": ["warn"],
+    "no-useless-constructor": ["warn"],
+    "no-useless-rename": ["warn"],
+    "no-useless-computed-key": ["warn"],
+    "no-useless-catch": ["warn"],
+    "no-useless-call": ["warn"],
 
     // just why tho
-    "require-await": ["error"],
+    "require-await": ["warn"],
 
     // the force is strong with this one
     yoda: ["error"],
 
     // give them some styles!
     // warn instead of error because I don't want to give headaches to people
-    "eol-last": ["warn", "always"],
     "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
-    indent: ["warn", 2],
-    "linebreak-style": ["warn", "unix"],
-    "max-len": [
-      "warn",
-      {
-        code: 80,
-        tabWidth: 2,
-        comments: 100,
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreTrailingComments: false,
-        ignoreStrings: false,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-      }
-    ],
+
     "no-multi-spaces": ["warn", {"ignoreEOLComments": false}],
     "semi": ["warn", "always"],
     "quotes": ["warn", "double"],
     "padded-blocks": ["warn", "always"],
     "semi-style": ["warn", "last"],
     "semi-spacing": ["warn", {"before": false, "after": true}],
-    "space-before-function-paren": ["warn", {
-        "anonymous": "ignore",
-        "named": "always",
-        "asyncArrow": "always"
-    }],
+    "space-before-function-paren": ["error", "never"],
     "space-before-blocks": ["warn", "always"],
     "switch-colon-spacing": ["warn", {"after": true, "before": false}],
     "keyword-spacing": ["warn", { before: true, after: true }],
 
-    "max-statements-per-line": ["error", {max: 1}]
+    "max-statements-per-line": ["error", {max: 1}],
+    "editorconfig/charset": ["error"],
+    "editorconfig/eol-last": ["error"],
+    "editorconfig/indent": ["error"],
+    "editorconfig/linebreak-style": ["error"],
+    "editorconfig/no-trailing-spaces": ["error"]
   },
   overrides: [
     {
