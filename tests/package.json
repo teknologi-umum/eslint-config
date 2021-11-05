@@ -1,0 +1,22 @@
+{
+  "name": "tests",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  },
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teknologi-umum/eslint-config.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teknologi-umum/eslint-config/issues"
+  },
+  "homepage": "https://github.com/teknologi-umum/eslint-config#readme"
+}

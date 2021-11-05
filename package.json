@@ -22,6 +22,7 @@
   "homepage": "https://github.com/teknologi-umum/eslint-config#readme",
   "workspaces": [
     "base",
-    "typescript"
+    "typescript",
+    "tests"
   ]
 }

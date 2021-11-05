@@ -15,7 +15,7 @@ module.exports = {
     sourceType: "module",
   },
 
-  plugins: ["import", "node", "promise", "regexp", "editorconfig"],
+  plugins: ["regexp", "editorconfig"],
 
   globals: {
     // don't mutate global variables
@@ -49,7 +49,7 @@ module.exports = {
 
     // prevent you from typo of " or ' instead or `
     // when you want a template literal
-    "no-template-curly-in-string": ["error"],
+    "no-template-curly-in-string": ["warn"],
 
     // eval is evil
     "no-eval": ["error"],
@@ -82,7 +82,7 @@ module.exports = {
     // again, be explicit, `arguments` can be overriden anyway
     // ex: (...arg) => { return args }  valid
     //     () => { return arguments }   invalid
-    "prefer-rest-params": ["error", "always"],
+    "prefer-rest-params": ["error"],
 
     // use `let` or `const` properly
     "prefer-const": ["warn"],
@@ -102,7 +102,7 @@ module.exports = {
 
     // Shadowing is the process by which a local variable shares the same name
     // as a variable in its containing scope
-    "no-shadow": ["warn"],
+    "no-shadow": ["off"],
 
     // useless stuffs
     "no-useless-return": ["warn"],
@@ -126,10 +126,14 @@ module.exports = {
     "no-multi-spaces": ["warn", {"ignoreEOLComments": false}],
     "semi": ["warn", "always"],
     "quotes": ["warn", "double"],
-    "padded-blocks": ["warn", "always"],
+    "padded-blocks": ["warn", "never"],
     "semi-style": ["warn", "last"],
     "semi-spacing": ["warn", {"before": false, "after": true}],
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+  }],
     "space-before-blocks": ["warn", "always"],
     "switch-colon-spacing": ["warn", {"after": true, "before": false}],
     "keyword-spacing": ["warn", { before: true, after: true }],
