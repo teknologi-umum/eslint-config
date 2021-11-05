@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config",
-  "version": "1.0.0",
+  "name": "@teknologi-umum/eslint-config-monorepo",
+  "version": "0.0.1",
   "description": "eslint base config for teknologi-umum",
   "main": "index.js",
   "scripts": {
