@@ -94,8 +94,8 @@ module.exports = {
     eqeqeq: ["error"],
 
     // preventing bugs and increasing code clarity by
-    // ensuring that block statements are wrapped in curly braces. 
-    curly: ["error", "multi", "consistent"],
+    // ensuring that block statements are wrapped in curly braces.
+    curly: ["error", "multi-line", "consistent"],
 
     // requires return statements to either always or never specify values.
     "consistent-return": ["error"],
