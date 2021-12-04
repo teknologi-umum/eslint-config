@@ -4,7 +4,6 @@ module.exports = {
     "plugin:jsonc/base",
     "plugin:yml/standard",
     "plugin:toml/standard",
-    "plugin:regexp/recommended",
   ],
 
   parserOptions: {
@@ -15,7 +14,7 @@ module.exports = {
     sourceType: "module",
   },
 
-  plugins: ["regexp", "editorconfig"],
+  plugins: ["editorconfig"],
 
   globals: {
     // don't mutate global variables
@@ -158,5 +157,5 @@ module.exports = {
       files: ["*.toml"],
       parser: "toml-eslint-parser",
     },
-  ]
+  ],
 };
