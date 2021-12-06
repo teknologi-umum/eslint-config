@@ -24,7 +24,7 @@
     "typescript": ">=4"
   },
   "dependencies": {
-    "@teknologi-umum/eslint-config-base": "0.0.3",
+    "@teknologi-umum/eslint-config-base": "0.0.4",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0"
   }
