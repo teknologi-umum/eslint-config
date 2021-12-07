@@ -1,6 +1,6 @@
 {
   "name": "@teknologi-umum/eslint-config-base",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "eslint-plugin-editorconfig": "^3.2.0",
-    "eslint-plugin-jsonc": "2.0.0",
+    "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-toml": "0.3.0",
     "eslint-plugin-yml": "0.12.0"
   }
