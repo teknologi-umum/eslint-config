@@ -16,7 +16,7 @@ module.exports = {
 
   plugins: ["@typescript-eslint"],
 
-  rules: {    
+  rules: {
     // we still need those @ts- comments
     "@typescript-eslint/ban-ts-comment": ["off"],
     "@typescript-eslint/ban-ts-ignore": ["off"],
@@ -28,7 +28,6 @@ module.exports = {
     // you've come this far, yet still uses any??
     "@typescript-eslint/no-explicit-any": ["warn"],
 
-    "@typescript-eslint/prefer-nullish-coalescing": ["warn"],
     "@typescript-eslint/prefer-optional-chain": ["warn"],
     "@typescript-eslint/no-empty-function": ["warn"],
     "@typescript-eslint/no-empty-interface": ["warn"],

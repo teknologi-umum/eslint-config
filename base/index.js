@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:jsonc/base",
+    "plugin:json/recommended",
     "plugin:yml/standard",
     "plugin:toml/standard",
   ],
@@ -145,10 +145,6 @@ module.exports = {
     "editorconfig/no-trailing-spaces": ["error"]
   },
   overrides: [
-    {
-      files: ["*.json", "*.json5"],
-      parser: "jsonc-eslint-parser",
-    },
     {
       files: ["*.yaml", "*.yml"],
       parser: "yaml-eslint-parser",
