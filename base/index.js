@@ -34,7 +34,15 @@ module.exports = {
     "no-extra-boolean-cast": ["error"],
 
     // don't add unecessary parens
-    "no-extra-parens": ["error", "all", { ignoreJSX: "multi-line" }],
+    "no-extra-parens": ["error", "all", {
+      ignoreJSX: "multi-line",
+      returnAssign: true,
+      conditionalAssign: true,
+      nestedBinaryExpressions: false,
+      enforceForArrowConditionals: false,
+      enforceForSequenceExpressions: false,
+      enforceForNewInMemberExpressions: false
+    }],
 
     // bruh, it's 2021
     "no-var": ["error"],
