@@ -34,15 +34,19 @@ module.exports = {
     "no-extra-boolean-cast": ["error"],
 
     // don't add unecessary parens
-    "no-extra-parens": ["error", "all", {
-      ignoreJSX: "multi-line",
-      returnAssign: true,
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      enforceForArrowConditionals: false,
-      enforceForSequenceExpressions: false,
-      enforceForNewInMemberExpressions: false
-    }],
+    "no-extra-parens": [
+      "error",
+      "all",
+      {
+        ignoreJSX: "multi-line",
+        returnAssign: true,
+        conditionalAssign: true,
+        nestedBinaryExpressions: false,
+        enforceForArrowConditionals: false,
+        enforceForSequenceExpressions: false,
+        enforceForNewInMemberExpressions: false,
+      },
+    ],
 
     // bruh, it's 2021
     "no-var": ["error"],
@@ -128,29 +132,32 @@ module.exports = {
 
     // give them some styles!
     // warn instead of error because I don't want to give headaches to people
-    "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["warn", "1tbs", { allowSingleLine: true }],
 
-    "no-multi-spaces": ["warn", {"ignoreEOLComments": false}],
-    "semi": ["warn", "always"],
-    "quotes": ["warn", "double"],
+    "no-multi-spaces": ["warn", { ignoreEOLComments: false }],
+    semi: ["warn", "always"],
+    quotes: ["warn", "double"],
     "padded-blocks": ["warn", "never"],
     "semi-style": ["warn", "last"],
-    "semi-spacing": ["warn", {"before": false, "after": true}],
-    "space-before-function-paren": ["error", {
-      "anonymous": "never",
-      "named": "never",
-      "asyncArrow": "always"
-  }],
+    "semi-spacing": ["warn", { before: false, after: true }],
+    "space-before-function-paren": [
+      "error",
+      {
+        anonymous: "never",
+        named: "never",
+        asyncArrow: "always",
+      },
+    ],
     "space-before-blocks": ["warn", "always"],
-    "switch-colon-spacing": ["warn", {"after": true, "before": false}],
+    "switch-colon-spacing": ["warn", { after: true, before: false }],
     "keyword-spacing": ["warn", { before: true, after: true }],
 
-    "max-statements-per-line": ["error", {max: 1}],
+    "max-statements-per-line": ["error", { max: 1 }],
     "editorconfig/charset": ["error"],
     "editorconfig/eol-last": ["error"],
     "editorconfig/indent": ["error"],
     "editorconfig/linebreak-style": ["error"],
-    "editorconfig/no-trailing-spaces": ["error"]
+    "editorconfig/no-trailing-spaces": ["error"],
   },
   overrides: [
     {
