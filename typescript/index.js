@@ -9,7 +9,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    sourceType: "module"
+    sourceType: "module",
   },
 
   parser: "@typescript-eslint/parser",
@@ -32,6 +32,21 @@ module.exports = {
     "@typescript-eslint/no-empty-function": ["warn"],
     "@typescript-eslint/no-empty-interface": ["warn"],
 
-    "@typescript-eslint/no-array-constructor": ["off"]
-  }
-}
+    "@typescript-eslint/no-array-constructor": ["off"],
+
+    "no-extra-parens": ["off"],
+    "@typescript-eslint/no-extra-parens": [
+      "error",
+      "all",
+      {
+        ignoreJSX: "multi-line",
+        returnAssign: true,
+        conditionalAssign: true,
+        nestedBinaryExpressions: false,
+        enforceForArrowConditionals: false,
+        enforceForSequenceExpressions: false,
+        enforceForNewInMemberExpressions: false,
+      },
+    ],
+  },
+};
